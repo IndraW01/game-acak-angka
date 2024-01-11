@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #546de5;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.box-angka {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin: auto;
+  background-color: #bccafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.generate-angka {
+  width: 150px;
+  height: 40px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid white;
+  outline: 0;
+  background-color: #546de5;
+  display: block;
+  margin: 20px auto 20px auto;
+  cursor: pointer;
+  color: white;
+  transition: all;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+
+.generate-angka:hover {
+  border: none;
+  background-color: #2a3ba4;
+}
+
+.box-input {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.input-angka {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 20px 15px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+.input-angka::placeholder {
+  font-size: 18px;
+}
+
+.input-angka:focus {
+  outline: 2px solid #99acf7;
+}
+
+.button-input {
+  width: 20%;
+  border-radius: 6px;
+  border: 0;
+  outline: 0;
+  background-color: #546de5;
+  cursor: pointer;
+  color: white;
+  transition: all;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  background-color: #2a3ba4;
+}
+
+.result-angka {
+  background-color: #ffb579;
+  padding: 10px 10px;
+  border-radius: 6px;
+  text-align: center;
+  display: none;
+}
