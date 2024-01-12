@@ -35,6 +35,7 @@ buttonInput.addEventListener('click', function (e) {
 
   if (angkaKurang == bom || angkaLebih == bom) {
     resultAngka.innerText = `Selamat anda Berhasil mendapatkan bom`;
+    confetti.start()
   } else {
     resultAngka.style.display = 'block';
     resultAngka.innerText = `Angka anda harus lebih dari ${angkaKurang} kurang dari ${angkaLebih}`;
@@ -45,6 +46,8 @@ buttonInput.addEventListener('click', function (e) {
 
 
 const generateAngkaRandom = () => {
+  confetti.stop();
+  resultAngka.remove();
   return Math.floor(Math.random() * 100) + 1;
 }
 
