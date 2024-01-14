@@ -52,6 +52,10 @@ const generateAngkaRandom = () => {
   resultAngka.style.backgroundColor = '';
   resultAngka.innerText = '';
   inputAngka.value = '';
+
+  angkaLebih = 100;
+  angkaKurang = 0;
+
   return Math.floor(Math.random() * 100) + 1;
 }
 
