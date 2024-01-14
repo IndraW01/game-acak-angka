@@ -50,7 +50,8 @@ const generateAngkaRandom = () => {
   confetti.stop();
   resultAngka.style.display = 'none';
   resultAngka.style.backgroundColor = '';
-  resultAngka.innerText = ``;
+  resultAngka.innerText = '';
+  inputAngka.value = '';
   return Math.floor(Math.random() * 100) + 1;
 }
 
