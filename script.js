@@ -38,6 +38,7 @@ buttonInput.addEventListener('click', function (e) {
     confetti.start()
   } else {
     resultAngka.style.display = 'block';
+    resultAngka.style.backgroundColor = '#ffb579';
     resultAngka.innerText = `Angka anda harus lebih dari ${angkaKurang} kurang dari ${angkaLebih}`;
   }
 
@@ -47,7 +48,9 @@ buttonInput.addEventListener('click', function (e) {
 
 const generateAngkaRandom = () => {
   confetti.stop();
-  resultAngka.remove();
+  resultAngka.style.display = 'none';
+  resultAngka.style.backgroundColor = '';
+  resultAngka.innerText = ``;
   return Math.floor(Math.random() * 100) + 1;
 }
 
