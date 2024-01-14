@@ -11,7 +11,8 @@ body {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
+  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,4 +101,21 @@ body {
   border-radius: 6px;
   text-align: center;
   display: none;
+}
+
+
+.bottom-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.bottom-logo img{
+  height: 70px;
+}
+
+.bottom-logo p {
+  padding-left: 10px;
+  justify-content: center;
 }
