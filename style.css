@@ -27,7 +27,7 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 100%;
-  margin: auto;
+  margin: 0 auto 20px auto;
   background-color: #bccafc;
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@ body {
   outline: 0;
   background-color: #546de5;
   display: block;
-  margin: 20px auto 20px auto;
+  margin: 0 auto;
   cursor: pointer;
   color: white;
   transition: all;
@@ -57,6 +57,7 @@ body {
 }
 
 .box-input {
+  margin-top: 20px;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
@@ -103,19 +104,24 @@ body {
   display: none;
 }
 
-
-.bottom-logo{
+.bottom-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10vh;
 }
 
-.bottom-logo img{
+.bottom-logo img {
   height: 40px;
 }
 
 .bottom-logo p {
   padding-left: 10px;
   justify-content: center;
+}
+
+/* Audio */
+#audioBerhasil,
+#audioGagal {
+  display: none;
 }
