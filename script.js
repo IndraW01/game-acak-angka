@@ -16,8 +16,9 @@ generateAngka.addEventListener('click', function (e) {
   }, 50)
   setTimeout(() => {
     clearInterval(interval);
-    bomAngka.innerText = generateAngkaRandom();
 
+    bomAngka.innerText = generateAngkaRandom();
+    bomAngka.style.display = 'none';
   }, 3000)
   // bomAngka.innerText = generateAngkaRandom();
 
@@ -48,6 +49,7 @@ buttonInput.addEventListener('click', function (e) {
     confetti.start()
     audioBerhasil.play();
     generateAngka.style.display = 'block';
+    bomAngka.style.display = 'block';
   } else {
     resultAngka.style.display = 'block';
     resultAngka.style.backgroundColor = '#ffb579';
