@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Atur gambar GIF */
+#animated-gif {
+  width: 200px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+  animation: slide 5s linear infinite; /* Animasi berjalan selama 5 detik dengan efek linear dan berulang terus-menerus */
+  position: absolute;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-image: url("/img/20252.jpg");
