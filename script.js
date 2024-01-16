@@ -8,6 +8,8 @@ const resultAngka = document.getElementById('result-angka');
 let angkaLebih = 100;
 let angkaKurang = 0;
 
+let winSoundEffect = new ('sound/tada fanfare a.mp3')
+
 generateAngka.addEventListener('click', function (e) {
   let interval = setInterval(() => {
     bomAngka.innerText = generateAngkaRandom();
@@ -36,6 +38,7 @@ buttonInput.addEventListener('click', function (e) {
   if (angkaKurang == bom || angkaLebih == bom) {
     resultAngka.innerText = `Selamat anda Berhasil mendapatkan bom`;
     confetti.start()
+    winSoundEffect.play()
   } else {
     resultAngka.style.display = 'block';
     resultAngka.style.backgroundColor = '#ffb579';
