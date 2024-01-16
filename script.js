@@ -3,12 +3,12 @@ const generateAngka = document.getElementById('generate-angka');
 const inputAngka = document.getElementById('input-angka');
 const buttonInput = document.getElementById('button-input');
 const resultAngka = document.getElementById('result-angka');
+const audioBerhasil = document.getElementById('audioBerhasil');
+const audioGagal = document.getElementById('audioGagal');
 
 
 let angkaLebih = 100;
 let angkaKurang = 0;
-
-let winSoundEffect = new ('sound/tada fanfare a.mp3')
 
 generateAngka.addEventListener('click', function (e) {
   let interval = setInterval(() => {
@@ -16,10 +16,13 @@ generateAngka.addEventListener('click', function (e) {
   }, 50)
   setTimeout(() => {
     clearInterval(interval);
-    bomAngka.innerText = generateAngkaRandom();
 
+    bomAngka.innerText = generateAngkaRandom();
+    bomAngka.style.display = 'none';
   }, 3000)
   // bomAngka.innerText = generateAngkaRandom();
+
+  generateAngka.style.display = 'none';
 });
 
 buttonInput.addEventListener('click', function (e) {
@@ -27,18 +30,26 @@ buttonInput.addEventListener('click', function (e) {
   const angka = parseInt(inputAngka.value);
 
   if (angka <= bom) {
-    angkaKurang = angka;
+    if (angka <= angkaKurang) {
+      audioGagal.play();
+    } else {
+      angkaKurang = angka;
+    }
   }
   if (angka >= bom) {
-    angkaLebih = angka;
+    if (angka >= angkaLebih) {
+      audioGagal.play();
+    } else {
+      angkaLebih = angka;
+    }
   }
-
-  console.log(angkaKurang, angkaLebih, bom);
 
   if (angkaKurang == bom || angkaLebih == bom) {
     resultAngka.innerText = `Selamat anda Berhasil mendapatkan bom`;
     confetti.start()
-    winSoundEffect.play()
+    audioBerhasil.play();
+    generateAngka.style.display = 'block';
+    bomAngka.style.display = 'block';
   } else {
     resultAngka.style.display = 'block';
     resultAngka.style.backgroundColor = '#ffb579';
@@ -61,4 +72,6 @@ const generateAngkaRandom = () => {
 
   return Math.floor(Math.random() * 100) + 1;
 }
+
+
 
