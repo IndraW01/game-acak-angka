@@ -124,6 +124,7 @@ body {
 
 /* bg-music-wrapper */
 #list {
+  display: none;
   margin-top: 1rem;
   border: 1px solid gray;
   width: 100px;
