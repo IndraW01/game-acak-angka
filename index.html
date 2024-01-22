@@ -42,6 +42,34 @@
       <p>Develop by Diskominfo Kutai Kartanegara</p>
     </div>
 
+    <!-- music control -->
+    <div class="bg-music-wrapper">
+      <button id="btn" onClick="playPause()">play</button>
+      <button id="btnSkip" onClick="skip()">skip</button>
+      <div id="list">
+        <div id="0">bg-1</div>
+        <div id="1">bg-2</div>
+        <div id="2">bg-3</div>
+        <div id="3">bg-4</div>
+        <div id="4">bg-5</div>
+        <div id="5">bg-6</div>
+      </div>
+      <div id="controls">
+        <label for="volume">Volume</label><br />
+        <input
+          id="volume"
+          type="range"
+          id="volume"
+          name="volume"
+          min="0"
+          max="1"
+          step=".1"
+          value=".5"
+          onInput="updateVolume()"
+        />
+      </div>
+    </div>
+
     <!-- Audio -->
     <audio id="audioBerhasil" controls>
       <source src="/sound/tada fanfare a.mp3" type="audio/mp3" />
@@ -53,6 +81,9 @@
 
     <script src="/asset/confetti.js"></script>
     <script src="/script.js"></script>
+    <script src="/asset/bgmusic.js">
+      
+    </script>
     <script></script>
   </body>
 </html>

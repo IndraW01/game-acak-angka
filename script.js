@@ -6,6 +6,7 @@ const resultAngka = document.getElementById('result-angka');
 const audioBerhasil = document.getElementById('audioBerhasil');
 const audioGagal = document.getElementById('audioGagal');
 
+// audio
 
 let angkaLebih = 100;
 let angkaKurang = 0;

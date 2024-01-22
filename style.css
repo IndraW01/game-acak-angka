@@ -122,7 +122,37 @@ body {
   justify-content: center;
 }
 
+/* bg-music-wrapper */
+#list {
+  margin-top: 1rem;
+  border: 1px solid gray;
+  width: 100px;
+}
+
+#controls {
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  width: 50px;
+}
+
+#volume {
+  width: 150px;
+  height: 20px;
+  transform-origin: 75px 75px;
+  transform: rotate(-90deg) translateY(50%);
+}
+
+.playing {
+  background-color: lightblue;
+}
+
+.paused {
+  background-color: wheat;
+}
+
 /* Audio */
+/* .bg-music, */
 #audioBerhasil,
 #audioGagal {
   display: none;
