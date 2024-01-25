@@ -9,6 +9,7 @@ body {
   background-image: url("/img/20252.jpg");
   background-position: center;
   background-size: cover;
+  overflow: auto;
 }
 
 .container {
@@ -123,6 +124,15 @@ body {
 }
 
 /* bg-music-wrapper */
+.bg-music-wrapper {
+  text-align: center;
+  position: absolute;
+  height: max-content;
+  bottom: 0;
+  right:0
+  /* background-color: #2a3ba4; */
+}
+
 #list {
   display: none;
   margin-top: 1rem;
@@ -131,25 +141,29 @@ body {
 }
 
 #controls {
-  position: fixed;
+  /* position: fixed; */
   right: 2rem;
   top: 1rem;
   width: 50px;
 }
 
 #volume {
-  width: 150px;
+  width: 100px;
   height: 20px;
   transform-origin: 75px 75px;
-  transform: rotate(-90deg) translateY(50%);
+  transform: rotate(0deg) translateY(50%);
 }
 
 .playing {
   background-color: lightblue;
+  width: 100px;
+  height: 35px;
 }
 
 .paused {
   background-color: wheat;
+  width: 100px;
+  height: 35px;
 }
 
 /* Audio */

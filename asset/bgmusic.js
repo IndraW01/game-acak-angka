@@ -22,6 +22,13 @@ sounds[current].load();
 sounds[current].play();
 
 
+
+if (!navigator.getAutoplayPolicy) {
+  console.log("navigator.getAutoplayPolicy() not supported");
+} else {
+  console.log("navigator.getAutoplayPolicy() is supported.");
+}
+
 // handle button click
 function playPause() {
   if (paused) {

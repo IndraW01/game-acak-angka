@@ -44,8 +44,9 @@
 
     <!-- music control -->
     <div class="bg-music-wrapper">
-      <button id="btn" onClick="playPause()">play</button>
-      <button id="btnSkip" onClick="skip()">skip</button>
+      <label for="">Musik</label>
+      <button class="generate-angka playing" id="btn" onClick="playPause()">play</button>
+      <button class="generate-angka paused" id="btnSkip" onClick="skip()">skip</button>
       <div id="list">
         <div id="0">bg-1</div>
         <div id="1">bg-2</div>
@@ -55,7 +56,7 @@
         <div id="5">bg-6</div>
       </div>
       <div id="controls">
-        <label for="volume">Volume</label><br />
+        <!-- <label id="label-volume" for="volume">Volume</label> -->
         <input
           id="volume"
           type="range"
@@ -63,7 +64,7 @@
           name="volume"
           min="0"
           max="1"
-          step=".1"
+          step=".01"
           value=".5"
           onInput="updateVolume()"
         />
@@ -81,9 +82,6 @@
 
     <script src="/asset/confetti.js"></script>
     <script src="/script.js"></script>
-    <script src="/asset/bgmusic.js">
-      
-    </script>
-    <script></script>
+    <script src="/asset/bgmusic.js"></script>
   </body>
 </html>
